@@ -8,14 +8,31 @@ import {
 } from 'react-native'
 
 const styles = StyleSheet.create({
-    view: {
+    container: {
+        flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
-        alignSelf: 'center'
+        alignItems: 'center'
+    },
+    inputContainer: {
+        alignItems: 'center'
     },
     input: {
+        backgroundColor: '#79c0c7',
+        textAlign: 'center',
+        marginBottom: 34,
+        width: 200,
+        borderWidth: 1,
+        borderRadius: 5,
+        borderColor: '#689ca1'
     },
-    button: {
+    restartContainer: {
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    gasPump: {
+        paddingBottom: 30,
+        paddingLeft: 15,
+        fontSize: 85
     }
 });
 
@@ -23,7 +40,8 @@ class GetInput extends Component {
 
     state = {
         text: undefined,
-        fuelType: ''
+        fuelType: '',
+        submitted: false
     }
 
     getFuelType = async () => {
@@ -54,6 +72,8 @@ class GetInput extends Component {
                         return vehicle.delek_nm
                     }
                 }
+
+                return false
             }
     
             catch (e){console.log(e)}
@@ -80,15 +100,30 @@ class GetInput extends Component {
     // Fetch the fuel type
     submit = async () => {
         if (this.state.text.length <= 5) return
-        const fuelType = await this.getFuelType();
+        const fuelType = await this.getFuelType()
         this.props.setFuel(fuelType)
+        this.setState({submitted: true})
+    }
+
+    restart = () => {
+        this.setState({submitted: false, text: ''})
+        this.props.restart()
     }
 
     render() {
         return (
-            <View style={styles.view}>
-                <TextInput style={styles.input} placeholder="הקלד מספר רכב.." value={this.state.text} onChangeText={text => this.setState({text})} />
-                <Button style={styles.button} onPress={this.submit} title="גלה את סוג הדלק" />
+            <View style={styles.container}>
+                {this.state.submitted ?
+                    <View style={styles.restartContainer}>
+                        <Text style={styles.gasPump}>⛽</Text>
+                        <Button color="#4f979e" onPress={this.restart} title="בדוק רכב אחר" />
+                    </View>
+                    :
+                    <View style={styles.inputContainer}>
+                        <TextInput onSubmitEditing={e => this.submit(e.nativeEvent.text)} keyboardType='numeric' style={styles.input} placeholder="מספר רישוי" value={this.state.text} onChangeText={text => this.setState({text})} />
+                        <Button color="#4f979e" onPress={this.submit} title="בדיקת סוג דלק" />
+                    </View>
+                }
             </View>
         )
     }
