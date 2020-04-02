@@ -17,11 +17,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#f1f3f4'
   },
   middle:{
-    flex: 8,
+    flex: 6,
     backgroundColor: '#79bac1'
   },
   bottom:{
-    flex: 1,
+    flex: 2,
     backgroundColor: '#2f7b82',
     alignItems: 'center',
     justifyContent: 'space-around',
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#015453',
     textShadowRadius: 42,
-    paddingTop: 12
+    paddingTop: 7.5
   },
   carEmoji: {
     fontSize: 90,
@@ -41,10 +41,18 @@ const styles = StyleSheet.create({
 
 class Root extends Component {
 
-  state = {data: undefined}
+  state = {
+    data: undefined,
+    emoji: ''
+  }
 
   display = data => {
     this.setState({data})
+    if (data){
+      const emoji = data.type === 'car' ? '🚗' : '🏍️'
+      this.setState({emoji})
+    }
+    else this.setState({emoji: '🙄'})
   }
 
   render() {
@@ -64,7 +72,7 @@ class Root extends Component {
         </View>
 
         <View style={styles.bottom}>
-            <Text style={styles.carEmoji}>🚗</Text>
+          <Text style={styles.carEmoji}>{this.state.emoji}</Text>
         </View>
       </View>
     )

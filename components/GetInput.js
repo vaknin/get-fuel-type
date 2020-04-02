@@ -49,7 +49,7 @@ class GetInput extends Component {
             if (json.result.records.length === 0) throw Error('Not a private car')
 
             // Found info, it is a private car
-            const car = {type: 'מכונית'}
+            const car = {type: 'car'}
             let vehicle = json.result.records[0]
             for (let key of Object.keys(vehicle)){
                 if (vehicle[key]) car[key] = vehicle[key]
@@ -95,7 +95,7 @@ class GetInput extends Component {
             // Return motorcycle information
             else{
                 const motorcycle = {}
-                motorcycle.type = 'אופנוע'
+                motorcycle.type = 'motorcycle'
                 const info = json.result.records[0]
                 for (let key of Object.keys(info)){
                     motorcycle[key] = info[key]
@@ -111,7 +111,7 @@ class GetInput extends Component {
 
     // Fetch the fuel type
     submit = async () => {
-        if (this.state.text.length <= 5) return
+        if (/*!this.state.text || this.state.text.length <= 5*/false) return
         const vehicle = await this.getCarInfo()
         this.props.display(vehicle)
     }
