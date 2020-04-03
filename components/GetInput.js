@@ -37,18 +37,19 @@ class GetInput extends Component {
         submitted: false
     }
 
+    // Capitalize the first letter of every key in the vehicle's detials
     capitalize = text => {
         return text.toString().toLowerCase().split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')
     }
 
+    // Get the info from data.gov.il
     getCarInfo = async () => {
 
         //#region Private Car
 
         // Get the vehicle's degem_nm
         try {
-            //const licensePlateEndpoint = `https://data.gov.il/api/action/datastore_search?resource_id=053cea08-09bc-40ec-8f7a-156f0677aff3&q=${this.state.text}`
-            const licensePlateEndpoint = `https://data.gov.il/api/action/datastore_search?resource_id=053cea08-09bc-40ec-8f7a-156f0677aff3&q=3274328`
+            const licensePlateEndpoint = `https://data.gov.il/api/action/datastore_search?resource_id=053cea08-09bc-40ec-8f7a-156f0677aff3&q=${this.state.text}`
             const response = await fetch(licensePlateEndpoint)
             const json = await response.json()
 
@@ -122,7 +123,7 @@ class GetInput extends Component {
 
     // Formats the vehicle's number like so: 3274328 -> 32-743-28
     formatLicensePlate = number => {
-        const arr = Array.from(number)
+        const arr = Array.from(number.toString())
 
         // 7 digits
         if (number.length === 7){
@@ -139,9 +140,9 @@ class GetInput extends Component {
         }
     }
 
-    // Fetch the fuel type
-    submit = async () => {
-        if (/*!this.state.text || this.state.text.length <= 5*/false) return
+    // Get the vehicle's number and send it to "getCarInfo"
+    onPressHandler = async () => {
+        if (!this.state.text || this.state.text.length <= 5) return
         const vehicle = await this.getCarInfo()
         if (vehicle.mispar_rechev) vehicle.mispar_rechev = this.formatLicensePlate(vehicle.mispar_rechev)
         this.props.display(vehicle)
@@ -152,7 +153,7 @@ class GetInput extends Component {
             <View style={styles.container}>
                 <View style={styles.inputContainer}>
                     <TextInput
-                        onSubmitEditing={e => this.submit(e.nativeEvent.text)}
+                        onSubmitEditing={e => this.onPressHandler(e.nativeEvent.text)}
                         keyboardType='numeric'
                         style={styles.input}
                         placeholder="מספר רכב" 
@@ -172,7 +173,10 @@ class GetInput extends Component {
                         paddingBottom={5}
                         progress
                         progressLoadingTime={200}
-                        onPress={this.submit}
+                        onPress={async next => {
+                            await this.onPressHandler()
+                            next()
+                        }}
                     >
                         <Icon name='arrow-left' size={25} color="#eee" />
                     </Button>

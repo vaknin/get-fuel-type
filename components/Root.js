@@ -6,6 +6,9 @@ import {
 } from 'react-native'
 import GetInput from './GetInput';
 import Result from './Result';
+var Sound = require('react-native-sound');
+Sound.setCategory('Playback');
+const honk = new Sound('honk.mp3', Sound.MAIN_BUNDLE, err => {if (err) throw err;})
 
 const styles = StyleSheet.create({
     container: {
@@ -47,7 +50,7 @@ class Root extends Component {
 
     state = {
         data: undefined,
-        emoji: ''
+        emoji: '🚘'
     }
 
     display = data => {
@@ -60,7 +63,7 @@ class Root extends Component {
     }
 
     restart = () => {
-        this.setState({ data: undefined })
+        this.setState({ data: undefined, emoji: '🚘' })
     }
 
     render() {
@@ -80,7 +83,10 @@ class Root extends Component {
                 </View>
 
                 <View style={styles.bottom}>
-                    <Text onPress={this.restart} style={styles.emoji}>{this.state.emoji}</Text>
+                    <Text onPress={() => {
+                        this.restart()
+                        honk.play()
+                    }} style={styles.emoji}>{this.state.emoji}</Text>
                 </View>
             </View>
         )
