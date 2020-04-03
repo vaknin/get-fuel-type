@@ -9,23 +9,26 @@ import Result from './Result';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    fontFamily: 'Rubik-Medium'
+    flex: 1
   },
   top:{
-    flex: 2,
+    flex: 1,
     alignItems: 'center',
     backgroundColor: '#f1f3f4'
   },
   middle:{
-    flex: 6,
-    backgroundColor: '#79bac1'
+    flex: 4,
+    backgroundColor: '#4aa',
+    borderTopWidth: 2,
+    borderTopColor: '#aaa'
   },
   bottom:{
-    flex: 2,
-    backgroundColor: '#2f7b82',
+    flex: 1,
+    backgroundColor: '#e67373',
     alignItems: 'center',
     justifyContent: 'space-around',
+    borderTopWidth: 1.7,
+    borderTopColor: '#777'
   },
   header: {
     fontSize: 72,
@@ -34,9 +37,9 @@ const styles = StyleSheet.create({
     paddingTop: 11.5,
     fontFamily: 'Rubik-Medium'
   },
-  carEmoji: {
+  emoji: {
     fontSize: 90,
-    paddingBottom: 55
+    paddingBottom: 35
   }
 });
 
@@ -50,7 +53,7 @@ class Root extends Component {
   display = data => {
     this.setState({data})
     if (data){
-      const emoji = data.type === 'car' ? '🚗' : '🏍️'
+      const emoji = data.type === 'car' ? '🚘' : '🏍️'
       this.setState({emoji})
     }
     else this.setState({emoji: '🙄'})
@@ -73,7 +76,7 @@ class Root extends Component {
         </View>
 
         <View style={styles.bottom}>
-          <Text style={styles.carEmoji}>{this.state.emoji}</Text>
+          <Text style={styles.emoji}>{this.state.emoji}</Text>
         </View>
       </View>
     )

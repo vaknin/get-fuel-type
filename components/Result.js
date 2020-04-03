@@ -4,6 +4,7 @@ import {
     ScrollView,
     Text,
     View,
+    TouchableOpacity,
 } from 'react-native'
 
 /*
@@ -55,11 +56,45 @@ import {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center'
     },
-    sadContainer: {
+    title : {
+        paddingTop: 10,
+        fontSize: 29.5,
+        color: '#111831',
+        fontFamily: 'Rubik-Bold',
+        textAlign: 'center'
+    },
+    subtitle: {
+        fontSize: 20.5,
+        marginBottom: 35,
+        color: '#911831',
+        fontFamily: 'Rubik-Medium',
+        textAlign: 'center'
+    },
+    scrollContainer: {
+        flex: 1,
+        flexDirection: 'row-reverse'
+    },
+    leftContainer: {
         alignItems: 'center',
-        paddingBottom: 30
+    },
+    rightContainer: {
+        alignItems: 'center',
+    },
+    attribute: {
+        marginBottom: 17.5,
+        backgroundColor: '#ddd',
+        padding: 15,
+        width: 140,
+        borderColor: 'black',
+        borderRadius: 7,
+        borderWidth: 1.4
+    },
+    attributeText: {
+        fontSize: 18,
+        fontFamily: 'Rubik-Regular',
+        textAlign: 'center',
+        color: '#666'
     },
     sadText: {
         fontSize: 23,
@@ -68,45 +103,20 @@ const styles = StyleSheet.create({
         color: '#015453',
         textShadowRadius: 30,
     },
-    scrollContainer: {
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    title : {
-        paddingTop: 15,
-        fontSize: 30,
-        fontWeight: 'bold',
-        textShadowRadius: 22.5,
-        color: '#222831',
-        fontFamily: 'Rubik-Regular'
-    }
 });
-
-const attributes = [
-    {key: 'nefah_manoa', value: 'נפח מנוע', type: ''},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-    {key: 'delek_nm', value: 'סוג דלק'},
-]
 
 class Result extends Component {
 
-    displayAttribute = attr => {
-        for (let entry of dict){
-            if (entry.key === attr){
-                return <Text>{`${entry.value}: ${this.props.data[attr]}`}</Text>
-            }
-        }
+    displayAttribute = (type, key, value) => {
+        const data = this.props.data
+
+        // Data is not available
+        if (!data[key]) return
+
+        // Prepend or Append
+        if (type === 'prepend' || type === 'append') return <TouchableOpacity activeOpacity={0.35} style={styles.attribute}>
+                    <Text style={styles.attributeText}>{type === 'prepend' ? `${data[key]} ${value}` : `${value} ${data[key]}`}</Text>
+                </TouchableOpacity>
     }
 
     render() {
@@ -115,17 +125,53 @@ class Result extends Component {
         const data = this.props.data
         
         return (
-            <View style={styles.container}>
+            <View style={{flex: 1}}>
                 {
                     data
                     ?
-                    <ScrollView contentContainerStyle={styles.scrollContainer}>
-                        {/*dict.map(e => <Text key={e.key}>{this.displayAttribute(e.key)}</Text>)*/}
+                    <View style={styles.container}>
                         <Text style={styles.title}>{`${data.shnat_yitzur} ${data.kinuy_mishari} ${data.tozar}`}</Text>
-                    </ScrollView>
+                        <Text style={styles.subtitle}>{data.mispar_rechev}</Text>
+
+                        <View style={styles.scrollContainer}>
+
+                            { /*Right Container*/ }
+                            <ScrollView contentContainerStyle={styles.rightContainer}>
+                                {this.displayAttribute('prepend', 'koah_sus', 'כ"ס')}
+                                {this.displayAttribute('prepend', 'nefah_manoa', 'סמ"ק')}
+                                {this.displayAttribute('prepend', 'mishkal_kolel', 'ק"ג')}
+                                {this.displayAttribute('append', 'baalut', 'סוג בעלות')}
+                                {this.displayAttribute('append', 'delek_nm', 'סוג דלק')}
+                            </ScrollView>
+
+                            { /*Left Container*/ }
+                            <ScrollView contentContainerStyle={styles.leftContainer}>
+                            {this.displayAttribute('prepend', 'koah_sus', 'כ"ס')}
+                                {this.displayAttribute('prepend', 'nefah_manoa', 'סמ"ק')}
+                                {this.displayAttribute('prepend', 'mishkal_kolel', 'ק"ג')}
+                                {this.displayAttribute('append', 'baalut', 'סוג בעלות')}
+                                {this.displayAttribute('append', 'delek_nm', 'סוג דלק')}
+                            </ScrollView>
+
+                        </View>
+                    </View>
+                    /*
+                    "abs_ind": "1",
+                    "automatic_ind": "1",
+                    "bakarat_shyut_adaptivit_ind": "0",
+                    "bakarat_stiya_menativ_ind": "0",
+                    "bakarat_yatzivut_ind": "0",
+                    "mazgan_ind": "1",
+                    "hege_koah_ind": "1",
+                    "hanaa_nm": "4X2",
+                    "mivchan_acharon_dt": "2020-03-11T00:00:00",
+                    "tokef_dt": "2020-09-07T00:00:00",
+                    "ramat_gimur": "GLX",
+                    "type": "מכונית"
+                    */
                     :
-                    <View style={styles.sadContainer}>
-                        <Text style={styles.sadText}>אויש, הרכב שלך לא מופיע במאגר משרד התחבורה.</Text>
+                    <View style={styles.container}>
+                        <Text style={styles.sadText}>אוי, הרכב שלך לא מופיע במאגר משרד התחבורה.</Text>
                     </View>
                 }
             </View>

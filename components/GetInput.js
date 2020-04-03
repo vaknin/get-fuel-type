@@ -3,10 +3,10 @@ import {
     StyleSheet,
     View,
     Text,
-    TextInput,
-    Button
+    TextInput
 } from 'react-native'
 
+import Button from 'react-native-really-awesome-button'
 
 const styles = StyleSheet.create({
     container: {
@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
         borderColor: '#689ca1',
         color: '#cbf1f5',
         fontFamily: 'Rubik-Regular'
-
     }
 });
 
@@ -121,14 +120,35 @@ class GetInput extends Component {
         //#endregion
     }
 
+    formatLicensePlate = number => {
+
+        const arr = Array.from(number)
+
+        // 7 digits
+        if (number.length === 7){
+            arr.splice(2, 0, "-")
+            arr.splice(6, 0, "-")
+            return arr.join('')
+        }
+
+        // 8 digits
+        else{
+            arr.splice(3, 0, "-")
+            arr.splice(6, 0, "-")
+            return arr.join('')
+        }
+    }
+
     // Fetch the fuel type
     submit = async () => {
         if (/*!this.state.text || this.state.text.length <= 5*/false) return
         const vehicle = await this.getCarInfo()
+        if (vehicle.mispar_rechev) vehicle.mispar_rechev = this.formatLicensePlate(vehicle.mispar_rechev)
         this.props.display(vehicle)
     }
 
     render() {
+        this.submit()
         return (
             <View style={styles.container}>
                 <View style={styles.inputContainer}>
@@ -141,7 +161,24 @@ class GetInput extends Component {
                         value={this.state.text}
                         onChangeText={text => this.setState({text})}
                     />
-                    <Button color="#4f979e" onPress={this.submit} title="אישור" />
+                    <Button
+                        backgroundColor="#4f979e"
+                        textFontFamily="Rubik-Regular"
+                        fontFamily="Rubik-Regular"
+                        textSize={17}
+                        textColor="#fff"
+                        width={85}
+                        height={40}
+                        borderRadius={12.5}
+                        paddingTop={5}
+                        paddingBottom={5}
+                        progress
+                        progressLoadingTime={200}
+                        onPress={this.submit}
+                    >
+                        אישור
+                    </Button>
+
                 </View>
             </View>
         )
