@@ -4,8 +4,9 @@ import {
     View,
     Text,
     TextInput,
-    Button,
+    Button
 } from 'react-native'
+
 
 const styles = StyleSheet.create({
     container: {
@@ -19,11 +20,14 @@ const styles = StyleSheet.create({
     input: {
         backgroundColor: '#79c0c7',
         textAlign: 'center',
-        marginBottom: 20,
-        width: 200,
+        marginBottom: 13,
+        width: 150,
         borderWidth: 1,
-        borderRadius: 5,
-        borderColor: '#689ca1'
+        borderRadius: 9,
+        borderColor: '#689ca1',
+        color: '#cbf1f5',
+        fontFamily: 'Rubik-Regular'
+
     }
 });
 
@@ -32,6 +36,10 @@ class GetInput extends Component {
     state = {
         text: undefined,
         submitted: false
+    }
+
+    capitalize = text => {
+        return text.toString().toLowerCase().split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')
     }
 
     getCarInfo = async () => {
@@ -51,8 +59,10 @@ class GetInput extends Component {
             // Found info, it is a private car
             const car = {type: 'car'}
             let vehicle = json.result.records[0]
+
+            // Save the car's info to the "car" object, if the info is not null/undefined
             for (let key of Object.keys(vehicle)){
-                if (vehicle[key]) car[key] = vehicle[key]
+                if (vehicle[key]) car[key] = this.capitalize(vehicle[key])
             }
             car.degem_cd = vehicle['degem_cd'].toString().padStart('4', '0')
 
@@ -68,8 +78,10 @@ class GetInput extends Component {
 
                     // Found the correct model
                     if (vehicle.degem_cd === car.degem_cd){
+
+                        // Save the car's info to the "car" object, if the info is not null/undefined
                         for (let key of Object.keys(vehicle)){
-                            if (vehicle[key]) car[key] = vehicle[key]
+                            if (vehicle[key]) car[key] = this.capitalize(vehicle[key])
                         }
                         return car
                     }
@@ -120,7 +132,15 @@ class GetInput extends Component {
         return (
             <View style={styles.container}>
                 <View style={styles.inputContainer}>
-                    <TextInput onSubmitEditing={e => this.submit(e.nativeEvent.text)} keyboardType='numeric' style={styles.input} placeholder="מספר רישוי" value={this.state.text} onChangeText={text => this.setState({text})} />
+                    <TextInput
+                        onSubmitEditing={e => this.submit(e.nativeEvent.text)}
+                        keyboardType='numeric'
+                        style={styles.input}
+                        placeholder="מספר רכב" 
+                        placeholderTextColor='#cbf1f5'
+                        value={this.state.text}
+                        onChangeText={text => this.setState({text})}
+                    />
                     <Button color="#4f979e" onPress={this.submit} title="אישור" />
                 </View>
             </View>

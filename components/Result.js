@@ -43,12 +43,11 @@ import {
 "mishkal_kolel": "1117",
 "koah_sus": "115",
 "nefah_manoa": "1840",
-"sug_degem": "P",
 "mivchan_acharon_dt": "2020-03-11T00:00:00",
 "tokef_dt": "2020-09-07T00:00:00",
-"tozar": "מזדה",
-"kinuy_mishari": "LANTIS 323",
-"shnat_yitzur": "1997",
+"tozar": "מזדה", @
+"kinuy_mishari": "LANTIS 323", @
+"shnat_yitzur": "1997", @
 "ramat_gimur": "GLX",
 "type": "מכונית"
 */
@@ -75,9 +74,11 @@ const styles = StyleSheet.create({
     },
     title : {
         paddingTop: 15,
-        fontSize: 25.5,
+        fontSize: 30,
         fontWeight: 'bold',
-        textShadowRadius: 50
+        textShadowRadius: 22.5,
+        color: '#222831',
+        fontFamily: 'Rubik-Regular'
     }
 });
 

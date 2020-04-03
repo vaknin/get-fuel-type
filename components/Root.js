@@ -9,7 +9,8 @@ import Result from './Result';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    fontFamily: 'Rubik-Medium'
   },
   top:{
     flex: 2,
@@ -27,11 +28,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   header: {
-    fontSize: 67.5,
-    fontWeight: 'bold',
+    fontSize: 72,
     color: '#015453',
     textShadowRadius: 42,
-    paddingTop: 7.5
+    paddingTop: 11.5,
+    fontFamily: 'Rubik-Medium'
   },
   carEmoji: {
     fontSize: 90,
