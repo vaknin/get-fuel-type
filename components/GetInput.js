@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import {
     StyleSheet,
     View,
-    Text,
     TextInput
 } from 'react-native'
 
 import Button from 'react-native-really-awesome-button'
+import Icon from 'react-native-vector-icons/Feather'
 
 const styles = StyleSheet.create({
     container: {
@@ -18,14 +18,14 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     input: {
-        backgroundColor: '#79c0c7',
+        backgroundColor: '#4fc4c4',
         textAlign: 'center',
         marginBottom: 13,
-        width: 150,
-        borderWidth: 1,
+        width: 130,
+        borderWidth: 1.5,
         borderRadius: 9,
         borderColor: '#689ca1',
-        color: '#cbf1f5',
+        fontSize: 17.5,
         fontFamily: 'Rubik-Regular'
     }
 });
@@ -120,8 +120,8 @@ class GetInput extends Component {
         //#endregion
     }
 
+    // Formats the vehicle's number like so: 3274328 -> 32-743-28
     formatLicensePlate = number => {
-
         const arr = Array.from(number)
 
         // 7 digits
@@ -148,7 +148,6 @@ class GetInput extends Component {
     }
 
     render() {
-        this.submit()
         return (
             <View style={styles.container}>
                 <View style={styles.inputContainer}>
@@ -157,18 +156,17 @@ class GetInput extends Component {
                         keyboardType='numeric'
                         style={styles.input}
                         placeholder="מספר רכב" 
-                        placeholderTextColor='#cbf1f5'
+                        placeholderTextColor='#eee'
                         value={this.state.text}
                         onChangeText={text => this.setState({text})}
+                        maxLength={8}
                     />
                     <Button
                         backgroundColor="#4f979e"
-                        textFontFamily="Rubik-Regular"
-                        fontFamily="Rubik-Regular"
-                        textSize={17}
+                        textSize={15}
                         textColor="#fff"
-                        width={85}
-                        height={40}
+                        width={75}
+                        height={35}
                         borderRadius={12.5}
                         paddingTop={5}
                         paddingBottom={5}
@@ -176,7 +174,7 @@ class GetInput extends Component {
                         progressLoadingTime={200}
                         onPress={this.submit}
                     >
-                        אישור
+                        <Icon name='arrow-left' size={25} color="#eee" />
                     </Button>
 
                 </View>

@@ -6,51 +6,10 @@ import {
     View,
     TouchableOpacity,
 } from 'react-native'
+import Icon from 'react-native-vector-icons/Feather'
 
 /*
-"automatic_ind" // אוטומט?
-"abs_ind" // ABS?
-"bakarat_shyut_adaptivit_ind" // yes or no
-"bakarat_stiya_menativ_ind" // yes or no
-"bakarat_yatzivut_ind" // yes or no
-"baalut" // השכרה ליסינג פרטי חברה
-"delek_nm" // סוג דלק
-"hanaa_nm" // 4x4 or 4x2
-"hege_koah_ind" // הגה כח
-"mazgan_ind" // יש מזגן?
-"mispar_rechev" // מס'
-"mishkal_kolel" // ק"ג
-"koah_sus" // כ"ס
-"nefah_manoa" // סמ"ק
-"mivchan_acharon_dt" // טסט אחרון ב
-"tokef_dt" // טסט נגמר ב
-"tozar" // חברה
-"kinuy_mishari" // מודל
-"shnat_yitzur" 
-"ramat_gimur" // רמת גימור
-"type" // car/motorcycle
-@@@@@@@@@@@@@@@@@
-"abs_ind": "1",
-"automatic_ind": "1",
-"bakarat_shyut_adaptivit_ind": "0",
-"bakarat_stiya_menativ_ind": "0",
-"bakarat_yatzivut_ind": "0",
-"baalut": "פרטי",
-"delek_nm": "בנזין",
-"hanaa_nm": "4X2",
-"hege_koah_ind": "1",
-"mazgan_ind": "1",
-"mispar_rechev": 3274328,
-"mishkal_kolel": "1117",
-"koah_sus": "115",
-"nefah_manoa": "1840",
-"mivchan_acharon_dt": "2020-03-11T00:00:00",
-"tokef_dt": "2020-09-07T00:00:00",
-"tozar": "מזדה", @
-"kinuy_mishari": "LANTIS 323", @
-"shnat_yitzur": "1997", @
-"ramat_gimur": "GLX",
-"type": "מכונית"
+    "type": "מכונית"
 */
 
 const styles = StyleSheet.create({
@@ -61,30 +20,37 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         fontSize: 29.5,
         color: '#111831',
-        fontFamily: 'Rubik-Bold',
-        textAlign: 'center'
+        fontFamily: 'Rubik-Light',
+        textAlign: 'center',
+        paddingBottom: 3,
+        textShadowRadius: 5
     },
     subtitle: {
         fontSize: 20.5,
-        marginBottom: 35,
-        color: '#911831',
+        paddingBottom: 8,
+        color: '#a44',
         fontFamily: 'Rubik-Medium',
-        textAlign: 'center'
+        textAlign: 'center',
+        borderBottomColor: '#499',
+        borderBottomWidth: 1.25,
+        textShadowRadius: 5
     },
     scrollContainer: {
         flex: 1,
-        flexDirection: 'row-reverse'
+        flexDirection: 'row-reverse',
     },
     leftContainer: {
+        paddingTop: 10,
         alignItems: 'center',
     },
     rightContainer: {
+        paddingTop: 10,
         alignItems: 'center',
     },
     attribute: {
         marginBottom: 17.5,
         backgroundColor: '#ddd',
-        padding: 15,
+        padding: 10,
         width: 140,
         borderColor: 'black',
         borderRadius: 7,
@@ -113,10 +79,35 @@ class Result extends Component {
         // Data is not available
         if (!data[key]) return
 
-        // Prepend or Append
+        // Prepend or Append attributes
         if (type === 'prepend' || type === 'append') return <TouchableOpacity activeOpacity={0.35} style={styles.attribute}>
                     <Text style={styles.attributeText}>{type === 'prepend' ? `${data[key]} ${value}` : `${value} ${data[key]}`}</Text>
                 </TouchableOpacity>
+
+        // Date attribute
+        else if (type === 'date'){
+            const date = new Date(data[key].toUpperCase())
+            const newDate = `${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`
+            return <TouchableOpacity activeOpacity={0.35} style={styles.attribute}>
+                        <Text style={styles.attributeText}>{`${value}\n${newDate}`}</Text>
+                    </TouchableOpacity>
+        }
+
+        // Indicator attribute
+        else if (type === 'indicator'){
+            return <TouchableOpacity activeOpacity={0.35} style={styles.attribute}>
+                        <Text style={styles.attributeText}>{value}{'\n'}
+                            <Icon name={`${data[key] === "0" ? 'x' : 'check'}`} size={30} color="#900" />
+                        </Text>
+                    </TouchableOpacity>
+        }
+
+        // Indicator attribute
+        else if (type === 'automatic'){
+            return <TouchableOpacity activeOpacity={0.35} style={styles.attribute}>
+                        <Text style={styles.attributeText}>{data[key] === "1" ? "גיר אוטומטי" : 'גיר ידני'}</Text>
+                    </TouchableOpacity>
+        }
     }
 
     render() {
@@ -137,38 +128,29 @@ class Result extends Component {
 
                             { /*Right Container*/ }
                             <ScrollView contentContainerStyle={styles.rightContainer}>
+                                {this.displayAttribute('automatic', 'automatic_ind')}
                                 {this.displayAttribute('prepend', 'koah_sus', 'כ"ס')}
                                 {this.displayAttribute('prepend', 'nefah_manoa', 'סמ"ק')}
                                 {this.displayAttribute('prepend', 'mishkal_kolel', 'ק"ג')}
                                 {this.displayAttribute('append', 'baalut', 'סוג בעלות')}
                                 {this.displayAttribute('append', 'delek_nm', 'סוג דלק')}
+                                {this.displayAttribute('append', 'ramat_gimur', 'רמת גימור')}
+                                {this.displayAttribute('date', 'mivchan_acharon_dt', 'טסט אחרון')}
+                                {this.displayAttribute('date', 'tokef_dt', 'הטסט עד')}
                             </ScrollView>
 
                             { /*Left Container*/ }
                             <ScrollView contentContainerStyle={styles.leftContainer}>
-                            {this.displayAttribute('prepend', 'koah_sus', 'כ"ס')}
-                                {this.displayAttribute('prepend', 'nefah_manoa', 'סמ"ק')}
-                                {this.displayAttribute('prepend', 'mishkal_kolel', 'ק"ג')}
-                                {this.displayAttribute('append', 'baalut', 'סוג בעלות')}
-                                {this.displayAttribute('append', 'delek_nm', 'סוג דלק')}
+                                {this.displayAttribute('indicator', 'abs_ind', 'ABS')}
+                                {this.displayAttribute('indicator', 'hege_koah_ind', 'הגה כח')}
+                                {this.displayAttribute('indicator', 'mazgan_ind', 'מזגן')}
+                                {this.displayAttribute('indicator', 'bakarat_yatzivut_ind', 'בקרת יציבות')}
+                                {this.displayAttribute('indicator', 'bakarat_shyut_adaptivit_ind', 'בקרת שיוט')}
+                                {this.displayAttribute('indicator', 'bakarat_stiya_menativ_ind', 'בקרת סטייה מנתיב')}
                             </ScrollView>
 
                         </View>
                     </View>
-                    /*
-                    "abs_ind": "1",
-                    "automatic_ind": "1",
-                    "bakarat_shyut_adaptivit_ind": "0",
-                    "bakarat_stiya_menativ_ind": "0",
-                    "bakarat_yatzivut_ind": "0",
-                    "mazgan_ind": "1",
-                    "hege_koah_ind": "1",
-                    "hanaa_nm": "4X2",
-                    "mivchan_acharon_dt": "2020-03-11T00:00:00",
-                    "tokef_dt": "2020-09-07T00:00:00",
-                    "ramat_gimur": "GLX",
-                    "type": "מכונית"
-                    */
                     :
                     <View style={styles.container}>
                         <Text style={styles.sadText}>אוי, הרכב שלך לא מופיע במאגר משרד התחבורה.</Text>
