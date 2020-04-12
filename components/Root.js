@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
         borderTopColor: '#898'
     },
     emoji: {
-        fontSize: 90,
-        paddingBottom: 35
+        fontSize: 70,
+        paddingBottom: 25
     }
 });
 

@@ -21,8 +21,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'fuelType' do
-  # Pods for fuelType
+target 'autoto' do
+  # Pods for autoto
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -54,7 +54,9 @@ target 'fuelType' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'fuelTypeTests' do
+  pod 'RNSound', :path => '../node_modules/react-native-sound'
+
+  target 'autotoTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -71,10 +73,10 @@ target 'fuelType' do
   end
 end
 
-target 'fuelType-tvOS' do
-  # Pods for fuelType-tvOS
+target 'autoto-tvOS' do
+  # Pods for autoto-tvOS
 
-  target 'fuelType-tvOSTests' do
+  target 'autoto-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

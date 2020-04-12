@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* fuelTypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* fuelTypeTests.m */; };
+		00E356F31AD99517003FC87E /* autotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* autotoTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -15,17 +15,33 @@
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2DCD954D1E0B4F2C00145EB5 /* fuelTypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* fuelTypeTests.m */; };
-		8FF7055B44B24308A463CA2E /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34C4C70FB33A4A7E9EBBBABB /* Rubik-Black.ttf */; };
-		A6EE625202AD4C108E730FDF /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1A37C6A8AAB4D5494210082 /* Rubik-BlackItalic.ttf */; };
-		55FB06F81D6A45349FD50E5F /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB114AF4E64CF6AA33FC32 /* Rubik-Bold.ttf */; };
-		0E3C3EEE83E048E3B94B279D /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 349E09734A714E009F824AA8 /* Rubik-BoldItalic.ttf */; };
-		B7AD8AE2231A43E9BA9051BC /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47EFCCB183984DB2A0774843 /* Rubik-Italic.ttf */; };
-		D8BAFACA395D450685CA80AE /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 798A0239A0104A7096A7DF3A /* Rubik-Light.ttf */; };
-		2D0A67AC487B477F8A67E34D /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3F97333BDC246F7BAF571DB /* Rubik-LightItalic.ttf */; };
-		04F29CE66EF44E049BE8C5D4 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 475A8F630AAA468EB2111F22 /* Rubik-Medium.ttf */; };
-		2649467F54F24FD0928FDDA2 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97AC4DAA61E94B4AA2DAF744 /* Rubik-MediumItalic.ttf */; };
-		792AB955BF864DF491BD8F41 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09F03E8D38574D0C8DDCDB3C /* Rubik-Regular.ttf */; };
+		2DCD954D1E0B4F2C00145EB5 /* autotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* autotoTests.m */; };
+		708D9EBBB2334B2692B0CD7B /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE85A9FDE42941A8AEF0719A /* AntDesign.ttf */; };
+		694F0EAB190F44758203908A /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A57E62A525A423F974DDE84 /* Entypo.ttf */; };
+		42626F1739744B93AB9BE95C /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 270C7AA0211D49F18B66EF78 /* EvilIcons.ttf */; };
+		EFAEE8E68DF2455D84EBCD9E /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99B2643AF06342648F103D2D /* Feather.ttf */; };
+		0081E908E7EC4EBA93D9BE63 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F345BA9C6A14361AD9A18CB /* FontAwesome.ttf */; };
+		9F1B92297FB44A7B97968B8D /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B362082ECC146399C39E328 /* FontAwesome5_Brands.ttf */; };
+		C23CAB9C6E9E46C9B7B6AB60 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D602DD5B52AE495893F2B96E /* FontAwesome5_Regular.ttf */; };
+		2B2BCFD3DA664B4F97F98CB1 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CA6B0EA38AA41D099F5097B /* FontAwesome5_Solid.ttf */; };
+		31C69E78F6324C068B9116FE /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 19A978127F844B2F800F151E /* Fontisto.ttf */; };
+		4573D528301F462A85B0711C /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E8DBEF763CED4641A43F613B /* Foundation.ttf */; };
+		A5FBBBABB1E84E7C9B3284DA /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31B778FA7E84F04BB68B488 /* Ionicons.ttf */; };
+		5B589392AE09401FA9C7F72A /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AAFBB9A716D341E8B2F480A3 /* MaterialCommunityIcons.ttf */; };
+		9C03D50940584C48B8941166 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A2515EE2D414B50A0A595B9 /* MaterialIcons.ttf */; };
+		50C8D3B91C4C481A80395526 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AD4FA96D28C42BC940ACBA1 /* Octicons.ttf */; };
+		C082E7B384FA4258867F20B3 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FB8EEB749E346B6AC61A836 /* SimpleLineIcons.ttf */; };
+		BF8D54ECA7AF4A16A03DA72E /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8097BB6AFC4C43CAA227EEE0 /* Zocial.ttf */; };
+		A2C14A185B72403686004C4C /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDE3BF26322740FE9A09F471 /* Rubik-Black.ttf */; };
+		8A6747166B47466C9C3A9331 /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B951F3A4B27E433D94C7A3D5 /* Rubik-BlackItalic.ttf */; };
+		37C46FC8E7FF462B943B5639 /* Rubik-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 64BF21488B5644DD895FED31 /* Rubik-Bold-Italic.ttf */; };
+		F0123663F023434BADCEAB4B /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7326EFEA2F64C5A90A579B5 /* Rubik-Bold.ttf */; };
+		AE1AA10E419941658966AB9E /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 549D5D4678E04195B2A5712B /* Rubik-Italic.ttf */; };
+		13DFC8D2E8EB4695B939778E /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDDFE2D342D24A0B9D3843A1 /* Rubik-Light.ttf */; };
+		7C962BB8E61149ED97992184 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE9D0B73E4A8B95E58571 /* Rubik-LightItalic.ttf */; };
+		DC093258DAD241F5A81B2A9C /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD0B20E0906343DCB0F5B042 /* Rubik-Medium.ttf */; };
+		AC401E4D1D6146CF932F38E2 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6500390F2BF146C58B41BEB1 /* Rubik-MediumItalic.ttf */; };
+		69CB5E2C3D2B46CFB2C6ADEA /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2BB161C0A8A142569FFF7B54 /* Rubik-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,43 +50,59 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = fuelType;
+			remoteInfo = autoto;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
-			remoteInfo = "fuelType-tvOS";
+			remoteInfo = "autoto-tvOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* fuelTypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fuelTypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* autotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = autotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* fuelTypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = fuelTypeTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* fuelType.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fuelType.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = fuelType/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = fuelType/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* autotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = autotoTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* autoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = autoto/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = autoto/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = fuelType/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = fuelType/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = fuelType/main.m; sourceTree = "<group>"; };
-		2D02E47B1E0B4A5D006451C7 /* fuelType-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fuelType-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D02E4901E0B4A5D006451C7 /* fuelType-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fuelType-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = autoto/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = autoto/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = autoto/main.m; sourceTree = "<group>"; };
+		2D02E47B1E0B4A5D006451C7 /* autoto-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "autoto-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D02E4901E0B4A5D006451C7 /* autoto-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "autoto-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		34C4C70FB33A4A7E9EBBBABB /* Rubik-Black.ttf */ = {isa = PBXFileReference; name = "Rubik-Black.ttf"; path = "../assets/fonts/Rubik-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D1A37C6A8AAB4D5494210082 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-BlackItalic.ttf"; path = "../assets/fonts/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2DDB114AF4E64CF6AA33FC32 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; name = "Rubik-Bold.ttf"; path = "../assets/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		349E09734A714E009F824AA8 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-BoldItalic.ttf"; path = "../assets/fonts/Rubik-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		47EFCCB183984DB2A0774843 /* Rubik-Italic.ttf */ = {isa = PBXFileReference; name = "Rubik-Italic.ttf"; path = "../assets/fonts/Rubik-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		798A0239A0104A7096A7DF3A /* Rubik-Light.ttf */ = {isa = PBXFileReference; name = "Rubik-Light.ttf"; path = "../assets/fonts/Rubik-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C3F97333BDC246F7BAF571DB /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-LightItalic.ttf"; path = "../assets/fonts/Rubik-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		475A8F630AAA468EB2111F22 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; name = "Rubik-Medium.ttf"; path = "../assets/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		97AC4DAA61E94B4AA2DAF744 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-MediumItalic.ttf"; path = "../assets/fonts/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		09F03E8D38574D0C8DDCDB3C /* Rubik-Regular.ttf */ = {isa = PBXFileReference; name = "Rubik-Regular.ttf"; path = "../assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BE85A9FDE42941A8AEF0719A /* AntDesign.ttf */ = {isa = PBXFileReference; name = "AntDesign.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1A57E62A525A423F974DDE84 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		270C7AA0211D49F18B66EF78 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99B2643AF06342648F103D2D /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4F345BA9C6A14361AD9A18CB /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3B362082ECC146399C39E328 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Brands.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D602DD5B52AE495893F2B96E /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Regular.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7CA6B0EA38AA41D099F5097B /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; name = "FontAwesome5_Solid.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		19A978127F844B2F800F151E /* Fontisto.ttf */ = {isa = PBXFileReference; name = "Fontisto.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E8DBEF763CED4641A43F613B /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C31B778FA7E84F04BB68B488 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AAFBB9A716D341E8B2F480A3 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4A2515EE2D414B50A0A595B9 /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9AD4FA96D28C42BC940ACBA1 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9FB8EEB749E346B6AC61A836 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8097BB6AFC4C43CAA227EEE0 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CDE3BF26322740FE9A09F471 /* Rubik-Black.ttf */ = {isa = PBXFileReference; name = "Rubik-Black.ttf"; path = "../assets/fonts/Rubik-Black.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B951F3A4B27E433D94C7A3D5 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-BlackItalic.ttf"; path = "../assets/fonts/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		64BF21488B5644DD895FED31 /* Rubik-Bold-Italic.ttf */ = {isa = PBXFileReference; name = "Rubik-Bold-Italic.ttf"; path = "../assets/fonts/Rubik-Bold-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C7326EFEA2F64C5A90A579B5 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; name = "Rubik-Bold.ttf"; path = "../assets/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		549D5D4678E04195B2A5712B /* Rubik-Italic.ttf */ = {isa = PBXFileReference; name = "Rubik-Italic.ttf"; path = "../assets/fonts/Rubik-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BDDFE2D342D24A0B9D3843A1 /* Rubik-Light.ttf */ = {isa = PBXFileReference; name = "Rubik-Light.ttf"; path = "../assets/fonts/Rubik-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9FCDE9D0B73E4A8B95E58571 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-LightItalic.ttf"; path = "../assets/fonts/Rubik-LightItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DD0B20E0906343DCB0F5B042 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; name = "Rubik-Medium.ttf"; path = "../assets/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6500390F2BF146C58B41BEB1 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; name = "Rubik-MediumItalic.ttf"; path = "../assets/fonts/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2BB161C0A8A142569FFF7B54 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; name = "Rubik-Regular.ttf"; path = "../assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +137,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* fuelTypeTests */ = {
+		00E356EF1AD99517003FC87E /* autotoTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* fuelTypeTests.m */,
+				00E356F21AD99517003FC87E /* autotoTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = fuelTypeTests;
+			path = autotoTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -122,7 +154,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* fuelType */ = {
+		13B07FAE1A68108700A75B9A /* autoto */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -133,7 +165,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = fuelType;
+			name = autoto;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -155,12 +187,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* fuelType */,
+				13B07FAE1A68108700A75B9A /* autoto */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* fuelTypeTests */,
+				00E356EF1AD99517003FC87E /* autotoTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				BF7A1807F9044DF68EE8789A /* Resources */,
+				E4BEBF3F747F43279D7501C3 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -170,27 +202,43 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* fuelType.app */,
-				00E356EE1AD99517003FC87E /* fuelTypeTests.xctest */,
-				2D02E47B1E0B4A5D006451C7 /* fuelType-tvOS.app */,
-				2D02E4901E0B4A5D006451C7 /* fuelType-tvOSTests.xctest */,
+				13B07F961A680F5B00A75B9A /* autoto.app */,
+				00E356EE1AD99517003FC87E /* autotoTests.xctest */,
+				2D02E47B1E0B4A5D006451C7 /* autoto-tvOS.app */,
+				2D02E4901E0B4A5D006451C7 /* autoto-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BF7A1807F9044DF68EE8789A /* Resources */ = {
+		E4BEBF3F747F43279D7501C3 /* Resources */ = {
 			isa = "PBXGroup";
 			children = (
-				34C4C70FB33A4A7E9EBBBABB /* Rubik-Black.ttf */,
-				D1A37C6A8AAB4D5494210082 /* Rubik-BlackItalic.ttf */,
-				2DDB114AF4E64CF6AA33FC32 /* Rubik-Bold.ttf */,
-				349E09734A714E009F824AA8 /* Rubik-BoldItalic.ttf */,
-				47EFCCB183984DB2A0774843 /* Rubik-Italic.ttf */,
-				798A0239A0104A7096A7DF3A /* Rubik-Light.ttf */,
-				C3F97333BDC246F7BAF571DB /* Rubik-LightItalic.ttf */,
-				475A8F630AAA468EB2111F22 /* Rubik-Medium.ttf */,
-				97AC4DAA61E94B4AA2DAF744 /* Rubik-MediumItalic.ttf */,
-				09F03E8D38574D0C8DDCDB3C /* Rubik-Regular.ttf */,
+				BE85A9FDE42941A8AEF0719A /* AntDesign.ttf */,
+				1A57E62A525A423F974DDE84 /* Entypo.ttf */,
+				270C7AA0211D49F18B66EF78 /* EvilIcons.ttf */,
+				99B2643AF06342648F103D2D /* Feather.ttf */,
+				4F345BA9C6A14361AD9A18CB /* FontAwesome.ttf */,
+				3B362082ECC146399C39E328 /* FontAwesome5_Brands.ttf */,
+				D602DD5B52AE495893F2B96E /* FontAwesome5_Regular.ttf */,
+				7CA6B0EA38AA41D099F5097B /* FontAwesome5_Solid.ttf */,
+				19A978127F844B2F800F151E /* Fontisto.ttf */,
+				E8DBEF763CED4641A43F613B /* Foundation.ttf */,
+				C31B778FA7E84F04BB68B488 /* Ionicons.ttf */,
+				AAFBB9A716D341E8B2F480A3 /* MaterialCommunityIcons.ttf */,
+				4A2515EE2D414B50A0A595B9 /* MaterialIcons.ttf */,
+				9AD4FA96D28C42BC940ACBA1 /* Octicons.ttf */,
+				9FB8EEB749E346B6AC61A836 /* SimpleLineIcons.ttf */,
+				8097BB6AFC4C43CAA227EEE0 /* Zocial.ttf */,
+				CDE3BF26322740FE9A09F471 /* Rubik-Black.ttf */,
+				B951F3A4B27E433D94C7A3D5 /* Rubik-BlackItalic.ttf */,
+				64BF21488B5644DD895FED31 /* Rubik-Bold-Italic.ttf */,
+				C7326EFEA2F64C5A90A579B5 /* Rubik-Bold.ttf */,
+				549D5D4678E04195B2A5712B /* Rubik-Italic.ttf */,
+				BDDFE2D342D24A0B9D3843A1 /* Rubik-Light.ttf */,
+				9FCDE9D0B73E4A8B95E58571 /* Rubik-LightItalic.ttf */,
+				DD0B20E0906343DCB0F5B042 /* Rubik-Medium.ttf */,
+				6500390F2BF146C58B41BEB1 /* Rubik-MediumItalic.ttf */,
+				2BB161C0A8A142569FFF7B54 /* Rubik-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -199,9 +247,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* fuelTypeTests */ = {
+		00E356ED1AD99517003FC87E /* autotoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "fuelTypeTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "autotoTests" */;
 			buildPhases = (
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
@@ -212,14 +260,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = fuelTypeTests;
-			productName = fuelTypeTests;
-			productReference = 00E356EE1AD99517003FC87E /* fuelTypeTests.xctest */;
+			name = autotoTests;
+			productName = autotoTests;
+			productReference = 00E356EE1AD99517003FC87E /* autotoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* fuelType */ = {
+		13B07F861A680F5B00A75B9A /* autoto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "fuelType" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "autoto" */;
 			buildPhases = (
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
@@ -231,14 +279,14 @@
 			);
 			dependencies = (
 			);
-			name = fuelType;
-			productName = fuelType;
-			productReference = 13B07F961A680F5B00A75B9A /* fuelType.app */;
+			name = autoto;
+			productName = autoto;
+			productReference = 13B07F961A680F5B00A75B9A /* autoto.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E47A1E0B4A5D006451C7 /* fuelType-tvOS */ = {
+		2D02E47A1E0B4A5D006451C7 /* autoto-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "fuelType-tvOS" */;
+			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "autoto-tvOS" */;
 			buildPhases = (
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
@@ -250,14 +298,14 @@
 			);
 			dependencies = (
 			);
-			name = "fuelType-tvOS";
-			productName = "fuelType-tvOS";
-			productReference = 2D02E47B1E0B4A5D006451C7 /* fuelType-tvOS.app */;
+			name = "autoto-tvOS";
+			productName = "autoto-tvOS";
+			productReference = 2D02E47B1E0B4A5D006451C7 /* autoto-tvOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2D02E48F1E0B4A5D006451C7 /* fuelType-tvOSTests */ = {
+		2D02E48F1E0B4A5D006451C7 /* autoto-tvOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "fuelType-tvOSTests" */;
+			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "autoto-tvOSTests" */;
 			buildPhases = (
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
@@ -268,9 +316,9 @@
 			dependencies = (
 				2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */,
 			);
-			name = "fuelType-tvOSTests";
-			productName = "fuelType-tvOSTests";
-			productReference = 2D02E4901E0B4A5D006451C7 /* fuelType-tvOSTests.xctest */;
+			name = "autoto-tvOSTests";
+			productName = "autoto-tvOSTests";
+			productReference = 2D02E4901E0B4A5D006451C7 /* autoto-tvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -299,7 +347,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "fuelType" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "autoto" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -312,10 +360,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* fuelType */,
-				00E356ED1AD99517003FC87E /* fuelTypeTests */,
-				2D02E47A1E0B4A5D006451C7 /* fuelType-tvOS */,
-				2D02E48F1E0B4A5D006451C7 /* fuelType-tvOSTests */,
+				13B07F861A680F5B00A75B9A /* autoto */,
+				00E356ED1AD99517003FC87E /* autotoTests */,
+				2D02E47A1E0B4A5D006451C7 /* autoto-tvOS */,
+				2D02E48F1E0B4A5D006451C7 /* autoto-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -334,16 +382,32 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				8FF7055B44B24308A463CA2E /* Rubik-Black.ttf in Resources */,
-				A6EE625202AD4C108E730FDF /* Rubik-BlackItalic.ttf in Resources */,
-				55FB06F81D6A45349FD50E5F /* Rubik-Bold.ttf in Resources */,
-				0E3C3EEE83E048E3B94B279D /* Rubik-BoldItalic.ttf in Resources */,
-				B7AD8AE2231A43E9BA9051BC /* Rubik-Italic.ttf in Resources */,
-				D8BAFACA395D450685CA80AE /* Rubik-Light.ttf in Resources */,
-				2D0A67AC487B477F8A67E34D /* Rubik-LightItalic.ttf in Resources */,
-				04F29CE66EF44E049BE8C5D4 /* Rubik-Medium.ttf in Resources */,
-				2649467F54F24FD0928FDDA2 /* Rubik-MediumItalic.ttf in Resources */,
-				792AB955BF864DF491BD8F41 /* Rubik-Regular.ttf in Resources */,
+				708D9EBBB2334B2692B0CD7B /* AntDesign.ttf in Resources */,
+				694F0EAB190F44758203908A /* Entypo.ttf in Resources */,
+				42626F1739744B93AB9BE95C /* EvilIcons.ttf in Resources */,
+				EFAEE8E68DF2455D84EBCD9E /* Feather.ttf in Resources */,
+				0081E908E7EC4EBA93D9BE63 /* FontAwesome.ttf in Resources */,
+				9F1B92297FB44A7B97968B8D /* FontAwesome5_Brands.ttf in Resources */,
+				C23CAB9C6E9E46C9B7B6AB60 /* FontAwesome5_Regular.ttf in Resources */,
+				2B2BCFD3DA664B4F97F98CB1 /* FontAwesome5_Solid.ttf in Resources */,
+				31C69E78F6324C068B9116FE /* Fontisto.ttf in Resources */,
+				4573D528301F462A85B0711C /* Foundation.ttf in Resources */,
+				A5FBBBABB1E84E7C9B3284DA /* Ionicons.ttf in Resources */,
+				5B589392AE09401FA9C7F72A /* MaterialCommunityIcons.ttf in Resources */,
+				9C03D50940584C48B8941166 /* MaterialIcons.ttf in Resources */,
+				50C8D3B91C4C481A80395526 /* Octicons.ttf in Resources */,
+				C082E7B384FA4258867F20B3 /* SimpleLineIcons.ttf in Resources */,
+				BF8D54ECA7AF4A16A03DA72E /* Zocial.ttf in Resources */,
+				A2C14A185B72403686004C4C /* Rubik-Black.ttf in Resources */,
+				8A6747166B47466C9C3A9331 /* Rubik-BlackItalic.ttf in Resources */,
+				37C46FC8E7FF462B943B5639 /* Rubik-Bold-Italic.ttf in Resources */,
+				F0123663F023434BADCEAB4B /* Rubik-Bold.ttf in Resources */,
+				AE1AA10E419941658966AB9E /* Rubik-Italic.ttf in Resources */,
+				13DFC8D2E8EB4695B939778E /* Rubik-Light.ttf in Resources */,
+				7C962BB8E61149ED97992184 /* Rubik-LightItalic.ttf in Resources */,
+				DC093258DAD241F5A81B2A9C /* Rubik-Medium.ttf in Resources */,
+				AC401E4D1D6146CF932F38E2 /* Rubik-MediumItalic.ttf in Resources */,
+				69CB5E2C3D2B46CFB2C6ADEA /* Rubik-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* fuelTypeTests.m in Sources */,
+				00E356F31AD99517003FC87E /* autotoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,7 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DCD954D1E0B4F2C00145EB5 /* fuelTypeTests.m in Sources */,
+				2DCD954D1E0B4F2C00145EB5 /* autotoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,12 +537,12 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* fuelType */;
+			target = 13B07F861A680F5B00A75B9A /* autoto */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 		2D02E4921E0B4A5D006451C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2D02E47A1E0B4A5D006451C7 /* fuelType-tvOS */;
+			target = 2D02E47A1E0B4A5D006451C7 /* autoto-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -490,7 +554,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = fuelType;
+			path = autoto;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -504,7 +568,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = fuelTypeTests/Info.plist;
+				INFOPLIST_FILE = autotoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -514,7 +578,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fuelType.app/fuelType";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/autoto.app/autoto";
 			};
 			name = Debug;
 		};
@@ -523,7 +587,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = fuelTypeTests/Info.plist;
+				INFOPLIST_FILE = autotoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -533,7 +597,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fuelType.app/fuelType";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/autoto.app/autoto";
 			};
 			name = Release;
 		};
@@ -548,7 +612,7 @@
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = fuelType/Info.plist;
+				INFOPLIST_FILE = autoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -556,7 +620,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = fuelType;
+				PRODUCT_NAME = autoto;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -569,7 +633,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = fuelType/Info.plist;
+				INFOPLIST_FILE = autoto/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -577,7 +641,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = fuelType;
+				PRODUCT_NAME = autoto;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -595,14 +659,14 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "fuelType-tvOS/Info.plist";
+				INFOPLIST_FILE = "autoto-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.fuelType-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.autoto-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -622,14 +686,14 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "fuelType-tvOS/Info.plist";
+				INFOPLIST_FILE = "autoto-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.fuelType-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.autoto-tvOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -648,17 +712,17 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "fuelType-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "autoto-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.fuelType-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.autoto-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fuelType-tvOS.app/fuelType-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/autoto-tvOS.app/autoto-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Debug;
@@ -674,17 +738,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "fuelType-tvOSTests/Info.plist";
+				INFOPLIST_FILE = "autoto-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.fuelType-tvOSTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.autoto-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fuelType-tvOS.app/fuelType-tvOS";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/autoto-tvOS.app/autoto-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 			};
 			name = Release;
@@ -805,7 +869,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "fuelTypeTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "autotoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -814,7 +878,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "fuelType" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "autoto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -823,7 +887,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "fuelType-tvOS" */ = {
+		2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "autoto-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4971E0B4A5E006451C7 /* Debug */,
@@ -832,7 +896,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "fuelType-tvOSTests" */ = {
+		2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "autoto-tvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D02E4991E0B4A5E006451C7 /* Debug */,
@@ -841,7 +905,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "fuelType" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "autoto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

@@ -58,17 +58,21 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: '#666'
     },
-    sadText: {
-        fontSize: 23,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        color: '#015453',
-        textShadowRadius: 30,
-    },
     motorcycleContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    sadContainer: {
+        borderRadius: 7,
+    },
+    sadText: {
+        fontSize: 23,
+        color: '#015453',
+        textAlign: 'center',
+        textShadowRadius: 2,
+        paddingTop: 17.5,
+        fontFamily: 'Rubik-Regular'
     },
 });
 
@@ -131,6 +135,7 @@ class Result extends Component {
                         <Text style={styles.subtitle}>{data.mispar_rechev}</Text>
 
                         {
+                            // Vehicle is a car
                             data.type === 'car'
                             ?
                             <View style={styles.carContainer}>
@@ -150,6 +155,7 @@ class Result extends Component {
 
                                 { /*Left Container*/ }
                                 <ScrollView contentContainerStyle={styles.leftContainer}>
+                                    {this.displayAttribute('indicator', 'disability', 'תג נכה')}
                                     {this.displayAttribute('indicator', 'abs_ind', 'ABS')}
                                     {this.displayAttribute('indicator', 'bakarat_yatzivut_ind', 'בקרת יציבות')}
                                     {this.displayAttribute('indicator', 'bakarat_shyut_adaptivit_ind', 'בקרת שיוט')}
@@ -160,6 +166,7 @@ class Result extends Component {
 
                             </View>
                             :
+                            // Vehicle is a motorcycle
                             <View style={styles.motorcycleContainer}>
                                 {this.displayAttribute('append', 'degem_nm', 'דגם')}
                                 {this.displayAttribute('append', 'sug_delek_nm', 'סוג דלק')}
@@ -168,8 +175,10 @@ class Result extends Component {
                         
                     </View>
                     :
-                    <View style={styles.container}>
-                        <Text style={styles.sadText}>אוי, הרכב שלך לא מופיע במאגר משרד התחבורה.</Text>
+                    <View style={styles.sadContainer}>
+                        <Text style={styles.sadText}>מצטערים, הרכב שלך לא מופיע במאגר משרד התחבורה.</Text>
+                        <Text style={styles.sadText}>המידע המתקבל הוא רק עבור כלי הרכב הפעילים הפרטיים משנת יצור 1996 ומעלה וכלי הרכב הפעילים המסחריים במשקל עד 3,500 ק"ג משנת יצור 1998 ומעלה.</Text>
+                        <Text style={styles.sadText}>לחצו על האימוג'י המבולבל כדי לנסות רכב אחר.</Text>
                     </View>
                 }
             </View>

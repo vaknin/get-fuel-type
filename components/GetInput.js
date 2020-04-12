@@ -121,6 +121,18 @@ class GetInput extends Component {
         //#endregion
     }
 
+    // Get disability indicator
+    hasDisabilityParking = async vehicleNumber => {
+
+        try {
+            const endpoint = `https://data.gov.il/api/action/datastore_search?resource_id=c8b9f9c8-4612-4068-934f-d4acd2e3c06e&q=${vehicleNumber}`;
+            const response = await fetch(endpoint)
+            const json = await response.json()
+            return json.result.records.length > 0
+        }
+        catch (e) {return false}
+    }
+
     // Formats the vehicle's number like so: 3274328 -> 32-743-28
     formatLicensePlate = number => {
         const arr = Array.from(number.toString())
@@ -145,6 +157,7 @@ class GetInput extends Component {
         if (!this.state.text || this.state.text.length <= 5) return
         const vehicle = await this.getCarInfo()
         if (vehicle.mispar_rechev) vehicle.mispar_rechev = this.formatLicensePlate(vehicle.mispar_rechev)
+        if (vehicle.type === 'car') vehicle.disability = await this.hasDisabilityParking(this.state.text) ? '1' : '0'
         this.props.display(vehicle)
     }
 
